@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-        "deploy": "touch out/.nojekyll && gh-pages -d out -b deploy -t true",
+        "deploy": "touch out/.nojekyll && gh-pages -d out",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
