@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/psy-portfolio' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/psy-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://sangypar.github.io/psy-portfolio/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? 'https://sangypar.github.io/psy-portfolio/' : '',
   trailingSlash: true,
 }
 
