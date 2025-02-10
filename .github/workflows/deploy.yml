@@ -22,12 +22,14 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm list # 설치된 의존성 목록 확인
 
       - name: Build
         run: |
           npm run build
-          touch out/.nojekyll 
+          ls -la out/ # 빌드 출력 디렉토리 내용 확인
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -35,4 +37,3 @@ jobs:
           folder: out
           branch: gh-pages
           clean: true
-          single-commit: true
