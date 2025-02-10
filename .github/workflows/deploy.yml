@@ -22,22 +22,15 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: |
-          echo "Installing dependencies..."
-          npm install
-          echo "Dependencies installed successfully"
-          echo "Listing installed packages:"
-          npm list --depth=0
+        run: npm install
 
       - name: Build
         run: |
-          echo "Starting build process..."
           npm run build
-          echo "Build completed"
-          echo "Checking build output directory:"
-          ls -la
-          echo "Checking out directory content:"
-          ls -la out/ || echo "out directory not found"
+          touch out/.nojekyll
+
+      - name: List output directory
+        run: ls -la out/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
