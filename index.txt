@@ -1,6 +1,6 @@
 1:HL["/psy-portfolio/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/psy-portfolio/_next/static/css/8f4f01d3b1e54fb5.css","style",{"crossOrigin":""}]
-0:["i2Nky6tlneuBOtBUwmD5J",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/psy-portfolio/_next/static/css/8f4f01d3b1e54fb5.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+0:["Pd0BJWWgy4MwDOfbPskvM",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/psy-portfolio/_next/static/css/8f4f01d3b1e54fb5.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:I[6954,[],""]
 6:I[7264,[],""]
 8:I[413,["413","static/chunks/413-a36b0e7b3b4e5791.js","931","static/chunks/app/page-b39b32d8dd434c14.js"],"Image"]
