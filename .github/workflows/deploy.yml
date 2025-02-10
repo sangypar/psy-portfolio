@@ -23,13 +23,21 @@ jobs:
 
       - name: Install dependencies
         run: |
+          echo "Installing dependencies..."
           npm install
-          npm list # 설치된 의존성 목록 확인
+          echo "Dependencies installed successfully"
+          echo "Listing installed packages:"
+          npm list --depth=0
 
       - name: Build
         run: |
+          echo "Starting build process..."
           npm run build
-          ls -la out/ # 빌드 출력 디렉토리 내용 확인
+          echo "Build completed"
+          echo "Checking build output directory:"
+          ls -la
+          echo "Checking out directory content:"
+          ls -la out/ || echo "out directory not found"
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

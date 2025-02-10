@@ -1,5 +1,5 @@
 1:HL["/psy-portfolio/_next/static/css/eee140969cf95b41.css","style",{"crossOrigin":""}]
-0:["ig6v1yQVU3ssOLDfoOqov",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/psy-portfolio/_next/static/css/eee140969cf95b41.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["CAbaWrxsA1sEQHes4p59x",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/psy-portfolio/_next/static/css/eee140969cf95b41.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[6954,[],""]
 5:I[7264,[],""]
 7:I[413,["413","static/chunks/413-a36b0e7b3b4e5791.js","931","static/chunks/app/page-78fa618ef90fb2a5.js"],"Image"]
