@@ -45,15 +45,15 @@ const Title = () => {
 
   return (
     <div className="h-full w-full relative flex items-center font-paperlogy">
- <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/back.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'saturate(0.7) brightness(0.9)', 
-        }}
-      />
+  <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('./back.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'saturate(0.7) brightness(0.9)', 
+          }}
+        />
 
 
 <div className="relative z-10 w-full">
