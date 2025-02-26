@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 export default function Home() {
   return (
     <div className="h-screen overflow-hidden"> 
-      <nav className="fixed top-0 left-0 right-0 z-50 h-12 bg-red-50">
+      <nav className="fixed top-0 left-0 right-0 z-50 h-12 bg-custom-dark">
         <Menubar />
       </nav>
       <main className="h-screen snap-y snap-mandatory overflow-y-scroll">

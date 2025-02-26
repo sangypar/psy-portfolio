@@ -9,43 +9,49 @@ const Menubar = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="flex justify-between items-center h-full font-paperlogy px-4">
+      <button 
+          onClick={() => scrollToSection('title')}
+          className="text-xl text-white "
+        >
+           PSY-PORTFOLIO
+        </button>
       <nav className="flex gap-8">
         <button 
           onClick={() => scrollToSection('title')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white"
         >
-          Title
+          TITLE
         </button>
         <button 
           onClick={() => scrollToSection('intro')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white"
         >
-          Intro
+          INTRO
         </button>
         <button 
           onClick={() => scrollToSection('career')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white"
         >
-          Career
+          CAREER
         </button>
         <button 
           onClick={() => scrollToSection('skill')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white"
         >
-          Skill
+          SKILL
         </button>
         <button 
           onClick={() => scrollToSection('project')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white" 
         >
-          Project
+          PROJECT
         </button>
         <button 
           onClick={() => scrollToSection('footer')}
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-custom-blue transition-colors text-white"
         >
-          Footer
+        ABOUT ME
         </button>
       </nav>
     </div>

@@ -8,6 +8,8 @@ html, body {
   overflow: hidden; /* 전체 페이지 스크롤 방지 */
   height: 100vh; /* 전체 높이 설정 */
   scroll-behavior: smooth;
+  background-color: #161513;
+  color: #ffffff;
 }
 
 .snap-mandatory::-webkit-scrollbar {
@@ -17,4 +19,32 @@ html, body {
 .snap-mandatory {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 24% {
+    opacity: 1;
+  }
+  25%, 49% {
+    opacity: 0;
+  }
+  50%, 74% {
+    opacity: 1;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor {
+  animation: cursor-blink 1.2s steps(1) infinite;
 }
