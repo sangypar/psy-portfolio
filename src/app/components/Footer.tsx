@@ -47,6 +47,20 @@ const Footer = () => {
   const [totalDraws, setTotalDraws] = useState<number>(0);
   const [characterDraws, setCharacterDraws] = useState<number>(0);
 
+  // 캐릭터에 따른 텍스트 색상 결정 함수
+  const getTextColor = (item: DrawItem): string => {
+    // 크롤리와 휴이는 보라색
+    if (item.name === "크롤리" || item.name === "휴이") {
+      return "text-purple-600";
+    }
+    // 확률이 3%인 캐릭터는 빨간색
+    else if (item.probability === 3.00) {
+      return "text-red-600";
+    }
+    // 그 외는 검정색
+    return "text-black";
+  };
+
   // 확률에 따른 아이템 뽑기 함수
   const drawItem = (): DrawItem => {
     const randomNumber = Math.random() * 100;
@@ -162,7 +176,7 @@ const Footer = () => {
               {probabilityTable.map((item) => (
                 <tr key={item.id} className="hover:bg-gray-50">
                   <td className="py-1 px-3 border-b text-black text-sm">{item.id}</td>
-                  <td className="py-1 px-3 border-b text-black text-sm">{item.name}</td>
+                  <td className={`py-1 px-3 border-b ${getTextColor(item)} text-sm`}>{item.name}</td>
                   <td className="py-1 px-3 border-b text-right text-black text-sm">{item.probability.toFixed(2)}%</td>
                 </tr>
               ))}
@@ -196,7 +210,7 @@ const Footer = () => {
               {latestDraws.map((item, index) => (
                 <div 
                   key={index} 
-                  className="p-2 border rounded bg-gray-50 text-black text-sm"
+                  className={`p-2 border rounded bg-gray-50 ${getTextColor(item)} text-sm`}
                 >
                   {item.name}
                 </div>
@@ -220,12 +234,16 @@ const Footer = () => {
                 <tbody>
                   {Object.entries(drawResults)
                     .sort(([, countA], [, countB]) => countB - countA)
-                    .map(([name, count], index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="py-1 px-3 border-b text-black text-sm">{name}</td>
-                        <td className="py-1 px-3 border-b text-right text-black text-sm">{count}</td>
-                      </tr>
-                    ))}
+                    .map(([name, count], index) => {
+                      // 해당 이름의 아이템 찾기
+                      const item = probabilityTable.find(item => item.name === name);
+                      return (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className={`py-1 px-3 border-b ${item ? getTextColor(item) : 'text-black'} text-sm`}>{name}</td>
+                          <td className="py-1 px-3 border-b text-right text-black text-sm">{count}</td>
+                        </tr>
+                      );
+                    })}
                 </tbody>
               </table>
             </div>
